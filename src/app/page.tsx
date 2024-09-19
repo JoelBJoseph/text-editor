@@ -10,20 +10,22 @@ const Home: React.FC = () => {
     return (
         <div className="min-h-screen bg-gray-100">
             <nav className="bg-blue-600 text-white p-4">
-                <ul className="flex space-x-6">
-                    <li
-                        className={`cursor-pointer ${activeTab === 'home' ? 'font-bold underline' : ''}`}
-                        onClick={() => setActiveTab('home')}
-                    >
-                        Home
-                    </li>
-                    <li
-                        className={`cursor-pointer ${activeTab === 'editor' ? 'font-bold underline' : ''}`}
-                        onClick={() => setActiveTab('editor')}
-                    >
-                        Text Editor
-                    </li>
-                </ul>
+                <div className="flex items-center justify-center">
+                    <ul className="flex space-x-6">
+                        <li
+                            className={`cursor-pointer ${activeTab === 'home' ? 'font-bold underline' : ''}`}
+                            onClick={() => setActiveTab('home')}
+                        >
+                            Home
+                        </li>
+                        <li
+                            className={`cursor-pointer ${activeTab === 'editor' ? 'font-bold underline' : ''}`}
+                            onClick={() => setActiveTab('editor')}
+                        >
+                            Text Editor
+                        </li>
+                    </ul>
+                </div>
             </nav>
 
             {activeTab === 'home' ? (
